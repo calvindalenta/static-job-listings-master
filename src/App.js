@@ -8,7 +8,7 @@ import Cards from "./components/styled/Cards";
 
 function App() {
 
-  const cards = data.map(job => <Card job={job} onClickTag={handleOnClickTag}/>)
+  const cards = data.map(job => <Card key={job.logo} job={job} onClickTag={handleOnClickTag}/>)
 
   function handleOnClickTag(e) {
     console.log(e);
