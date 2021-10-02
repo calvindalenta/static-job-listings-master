@@ -14,11 +14,7 @@ Users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Filter job listings based on the categories
-
-### Screenshot
-
-![Desktop Design](./design/desktop-design.jpg)
-
+- 
 ## My process
 
 ### Built with
@@ -36,3 +32,8 @@ I learned how to do simple filtering and learned how to use `ThemeProvider` and 
 
 - Frontend Mentor - [@calvindalenta](https://www.frontendmentor.io/profile/calvindalenta)
 - Twitter - [@calvindalenta](https://www.linkedin.com/in/calvindalenta/)
+
+### Screenshot
+
+<img src="https://raw.githubusercontent.com/calvindalenta/static-job-listings-master/master/public/design/desktop-design.jpg" width="50%">
+
