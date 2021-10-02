@@ -5,6 +5,7 @@ const StyledCard = styled.div`
     background-color: white;
     padding: 2em;
     border-radius: ${({theme}) => theme.borderRadius};
+    box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.2);
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
