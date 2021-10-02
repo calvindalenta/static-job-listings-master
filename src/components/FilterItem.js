@@ -2,12 +2,12 @@ import RemoveButton from "./styled/RemoveButton";
 import TagsItem from "./styled/TagsItem";
 import StyledFilterItem from "./styled/FilterItem.styled";
 
-export default function FilterItem() {
+export default function FilterItem({ itemName, onClick }) {
 
   return (
     <StyledFilterItem>
-        <TagsItem>Item</TagsItem>
-        <RemoveButton>
+        <TagsItem>{itemName}</TagsItem>
+        <RemoveButton onClick={() => onClick(itemName)}>
             <img src="images/icon-remove.svg" alt="Remove Icon" />
         </RemoveButton>
     </StyledFilterItem>
