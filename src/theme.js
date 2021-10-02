@@ -3,5 +3,5 @@ export const theme = {
     primaryDark: 'hsl(180, 14%, 20%)',
     secondary: 'hsl(180, 8%, 52%)',
     background: 'hsl(180, 52%, 96%)',
-
+    tabletBackground: 'hsl(180, 31%, 95%)',
 }
