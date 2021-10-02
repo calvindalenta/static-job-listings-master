@@ -23,7 +23,7 @@ export default function Card({ job, onClickTag }) {
                         {job.featured && <CardFeatured>Featured</CardFeatured>}
                     </CardCompany>
                     <CardPosition>{job.position}</CardPosition>
-                    <p>{job.postedAt} - {job.contract} - {job.location}</p>
+                    <p>{job.postedAt} • {job.contract} • {job.location}</p>
                 </CardInfo>
             </CardLeft>
             <Tags>
