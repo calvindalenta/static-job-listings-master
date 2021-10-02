@@ -1,8 +1,11 @@
+import { ThemeProvider } from "styled-components";
+import { theme } from './theme';
+
 function App() {
   return (
-    <div>
+    <ThemeProvider theme={theme}>
       WOW!
-    </div>
+    </ThemeProvider>
   );
 }
 
