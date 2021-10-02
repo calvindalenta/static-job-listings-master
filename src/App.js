@@ -6,6 +6,7 @@ import data from "./data";
 import Card from "./components/Card";
 import Cards from "./components/styled/Cards";
 import { useState } from "react";
+import FilterItem from "./components/FilterItem";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
   });
 
   const cards = filteredCards.map(job => <Card key={job.logo} job={job} onClickTag={handleOnClickTag}/>)
+  const filterItems = filter.map(item => <FilterItem>{item}</FilterItem>)
 
   function handleOnClickTag(keyword) {
     const newFilter = [...filter, keyword]
@@ -27,6 +29,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Header />
+      {filterItems}
       <Cards>
         {cards}
       </Cards>
