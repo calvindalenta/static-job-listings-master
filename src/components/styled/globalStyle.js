@@ -16,6 +16,13 @@ const GlobalStyle = createGlobalStyle`
         font-size: 15px;
         background-color: ${({theme}) => theme.background};
     }
+
+    @media screen and (max-width: 600px) {
+        body {
+            font-size: 0.7em;
+        }
+    }
+
 `
 
 export default GlobalStyle;
