@@ -7,8 +7,11 @@ import CardCompany from "./styled/CardCompany";
 import CardNew from "./styled/CardNew";
 import CardFeatured from "./styled/CardFeatured";
 import CardPosition from "./styled/CardPosition";
+import Tags from "./styled/Tags";
+import TagsItem from "./styled/TagsItem";
 
 export default function Card({ job }) {
+    const tags = [job.role, job.level, ...job.tools, ...job.languages].map(tag => <TagsItem>{tag}</TagsItem>);
     return (
         <StyledCard>
             <CardLeft>
@@ -23,7 +26,9 @@ export default function Card({ job }) {
                     <p>{job.postedAt} - {job.contract} - {job.location}</p>
                 </CardInfo>
             </CardLeft>
-            {job.company}
+            <Tags>
+                {tags}
+            </Tags>
         </StyledCard>
     );
 } 
