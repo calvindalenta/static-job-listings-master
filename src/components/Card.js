@@ -1,10 +1,11 @@
 import { objectOf, number, string, bool, array } from "prop-types";
+import StyledCard from "./styled/Card.styled";
 
 export default function Card({ job }) {
     return (
-        <>
+        <StyledCard>
             {job.company}
-        </>
+        </StyledCard>
     );
 } 
 
