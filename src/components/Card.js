@@ -1,4 +1,4 @@
-import { objectOf, number, string, bool, array } from "prop-types";
+import { objectOf, number, string, bool, array, func } from "prop-types";
 import StyledCard from "./styled/Card.styled";
 import CardLeft from "./styled/CardLeft";
 import CardImage from "./styled/CardImage";
@@ -10,8 +10,8 @@ import CardPosition from "./styled/CardPosition";
 import Tags from "./styled/Tags";
 import TagsItem from "./styled/TagsItem";
 
-export default function Card({ job }) {
-    const tags = [job.role, job.level, ...job.tools, ...job.languages].map(tag => <TagsItem>{tag}</TagsItem>);
+export default function Card({ job, onClickTag }) {
+    const tags = [job.role, job.level, ...job.tools, ...job.languages].map(tag => <TagsItem onClick={() => onClickTag(tag)}>{tag}</TagsItem>);
     return (
         <StyledCard>
             <CardLeft>
@@ -48,5 +48,6 @@ Card.propTypes = {
         string.isRequired,
         array.isRequired,
         array.isRequired
-    )
+    ),
+    onClickTag: func.isRequired
 }

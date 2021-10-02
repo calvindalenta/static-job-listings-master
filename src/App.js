@@ -8,7 +8,11 @@ import Cards from "./components/styled/Cards";
 
 function App() {
 
-  const cards = data.map(job => <Card job={job} />)
+  const cards = data.map(job => <Card job={job} onClickTag={handleOnClickTag}/>)
+
+  function handleOnClickTag(e) {
+    console.log(e);
+  }
 
   return (
     <ThemeProvider theme={theme}>
