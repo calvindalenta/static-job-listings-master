@@ -6,6 +6,7 @@ const TagsItem = styled.div`
     background-color: ${({theme}) => theme.tabletBackground};
     color: hsl(180, 29%, 50%);
     font-weight: bold;
+    border-radius: ${({theme}) => theme.borderRadius};
 
     &:hover {
         background-color: ${({theme}) => theme.primary};
