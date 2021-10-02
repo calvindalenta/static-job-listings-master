@@ -5,7 +5,7 @@ const TagsItem = styled.div`
     font-size: 0.9em;
     padding: 0.4em;
     background-color: ${({theme}) => theme.tabletBackground};
-    color: hsl(180, 29%, 50%);
+    color: ${({theme}) => theme.primary};
     font-weight: bold;
     border-radius: ${({theme}) => theme.borderRadius};
 
