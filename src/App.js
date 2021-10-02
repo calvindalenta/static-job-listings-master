@@ -23,15 +23,21 @@ function App() {
   });
 
   const cards = filteredCards.map(job => <Card key={job.logo} job={job} onClickTag={handleOnClickTag}/>)
-  const filterItems = filter.map((item, index) => <FilterItem key={index} itemName={item} onClick={handleOnClickFilterItem}></FilterItem>)
+  const filterItems = filter.map((item, index) => <FilterItem key={index} itemName={item} index={index} onClick={handleOnClickFilterItem}></FilterItem>)
 
   function handleOnClickTag(keyword) {
     const newFilter = [...filter, keyword]
     setFilter(newFilter);
   }
 
-  function handleOnClickFilterItem(keyword){
-    console.log(keyword)
+  function handleOnClickFilterItem(index){
+    const newFilter = filter.slice()
+    newFilter.splice(index, 1);
+    setFilter(newFilter);
+  }
+
+  function handleCloseButton(){
+    setFilter([]);
   }
 
   return (
@@ -42,7 +48,7 @@ function App() {
         {filterItems.length !== 0 && 
         <StyledFilter>
           <FilterTags>{filterItems}</FilterTags>
-          <CloseButton>Close</CloseButton>
+          <CloseButton onClick={handleCloseButton}>Close</CloseButton>
         </StyledFilter>
         }
         {cards}
