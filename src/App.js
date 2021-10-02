@@ -24,6 +24,7 @@ function App() {
   const filterItems = filter.map((item, index) => <FilterItem key={index} itemName={item} index={index} onClick={handleOnClickFilterItem}></FilterItem>)
 
   function handleOnClickTag(keyword) {
+    if (filter.includes(keyword)) return;
     const newFilter = [...filter, keyword]
     setFilter(newFilter);
   }
