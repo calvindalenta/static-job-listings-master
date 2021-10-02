@@ -13,7 +13,7 @@ import TagsItem from "./styled/TagsItem";
 export default function Card({ job, onClickTag }) {
     const tags = [job.role, job.level, ...job.tools, ...job.languages].map((tag, index) => <TagsItem key={index} onClick={() => onClickTag(tag)}>{tag}</TagsItem>);
     return (
-        <StyledCard>
+        <StyledCard featured={job.featured}>
             <CardLeft>
                 <CardImage src={job.logo} alt={job.company} />
                 <CardInfo>

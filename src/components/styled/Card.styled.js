@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "../../theme";
 
 const StyledCard = styled.div`
     width: 100%;
@@ -9,6 +10,10 @@ const StyledCard = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    border-left: ${({theme, featured}) => {
+        if (!featured) return 'none';
+        return `5px solid ${theme.primary}`;
+    }};
 
     @media screen and (max-width: 1024px) {
         grid-template-columns: 1fr;
